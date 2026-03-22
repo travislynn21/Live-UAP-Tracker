@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>UAP Kinematic Track Map</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"/>
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
+    <style> #map { width: 100vw; height: 100vh; margin: 0; padding: 0; } body { margin: 0; padding: 0; } </style>
+</head>
+<body>
+    <div id="map"></div>
+    <script>
+        var map = L.map('map').setView([3.3333333333333335, 1.6666666666666667], 4);
+        L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; OpenStreetMap'
+        }).addTo(map);
+
+        L.polyline([[0.0,0.0],[5.0,0.0],[5.0,5.0]], {color: 'red', weight: 4}).addTo(map).bindTooltip("Observed Flight Path");
+        L.circleMarker([0.0, 0.0], {color: 'darkred', fillColor: 'red', fillOpacity: 1, radius: 4}).addTo(map).bindTooltip('T=0.00s');
+L.circleMarker([5.0, 0.0], {color: 'darkred', fillColor: 'red', fillOpacity: 1, radius: 4}).addTo(map).bindTooltip('T=1.00s');
+L.circleMarker([5.0, 5.0], {color: 'darkred', fillColor: 'red', fillOpacity: 1, radius: 4}).addTo(map).bindTooltip('T=2.00s');
+
+        L.polyline([[5.0, 5.0], [5.0, 55.0]], {color: 'orange', weight: 4, dashArray: "10, 10"}).addTo(map).bindTooltip("Predicted Trajectory (+10s)");
+        L.marker([5.0, 55.0]).addTo(map).bindTooltip("Extrapolated Position");
+    </script>
+</body>
+</html>

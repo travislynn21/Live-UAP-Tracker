@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>UAP Kinematic Track Map</title>
+    <meta http-equiv="refresh" content="10">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"/>
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
+    <style> #map { width: 100vw; height: 100vh; margin: 0; padding: 0; } body { margin: 0; padding: 0; } </style>
+</head>
+<body>
+    <div id="map"></div>
+    <script>
+        var map = L.map('map').setView([37.16311304347826, -117.80330931677018], 4);
+        L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; OpenStreetMap'
+        }).addTo(map);
+
+        L.polyline([[36.0827,-116.1694],[36.0804,-116.1666],[36.0956,-116.1854],[36.0935,-116.1828],[36.1312,-116.2299],[36.1412,-116.2422],[36.1454,-116.2475],[36.1804,-116.291],[36.1866,-116.2988],[36.2078,-116.3252],[36.224,-116.3452],[36.224,-116.3452],[36.224,-116.3452],[36.2668,-116.3985],[36.2831,-116.4189],[36.2998,-116.439],[36.3126,-116.4538],[36.3172,-116.4592],[36.3462,-116.4936],[36.3578,-116.5073],[36.3715,-116.5235],[36.3895,-116.545],[36.3924,-116.5484],[36.3895,-116.545],[36.4347,-116.5992],[36.4442,-116.6105],[36.4692,-116.6391],[36.4812,-116.6527],[36.5047,-116.6795],[36.5152,-116.6915],[36.5195,-116.6963],[36.5348,-116.7135],[36.5152,-116.6915],[36.5748,-116.7591],[36.5946,-116.7818],[36.5748,-116.7591],[36.6306,-116.8228],[36.6109,-116.8003],[36.6594,-116.8556],[36.6594,-116.8556],[36.6594,-116.8556],[36.6594,-116.8556],[36.6594,-116.8556],[36.743,-116.9439],[36.7657,-116.9617],[36.7865,-116.9758],[36.8061,-116.9886],[36.8109,-116.9918],[36.8459,-117.0147],[36.8637,-117.0263],[36.8865,-117.0411],[36.8995,-117.0495],[36.8995,-117.0495],[36.8995,-117.0495],[36.8995,-117.0495],[36.8995,-117.0495],[36.8995,-117.0495],[36.8995,-117.0495],[36.8995,-117.0495],[36.8995,-117.0495],[36.8995,-117.0495],[36.8995,-117.0495],[36.8995,-117.0495],[36.8995,-117.0495],[36.8995,-117.0495],[36.8995,-117.0495],[36.8995,-117.0495],[36.8995,-117.0495],[36.8995,-117.0495],[36.8995,-117.0495],[37.2757,-117.2966],[37.2924,-117.3101],[37.322,-117.3371],[37.3392,-117.3551],[37.3569,-117.3739],[37.3554,-117.3723],[37.3727,-117.3902],[37.405,-117.4242],[37.4081,-117.4276],[37.4166,-117.4367],[37.4166,-117.4367],[37.4166,-117.4367],[37.4166,-117.4367],[37.4166,-117.4367],[37.4166,-117.4367],[37.4166,-117.4367],[37.4166,-117.4367],[37.4166,-117.4367],[37.4166,-117.4367],[37.4166,-117.4367],[37.4166,-117.4367],[37.4166,-117.4367],[37.4166,-117.4367],[37.4166,-117.4367],[37.4166,-117.4367],[37.4166,-117.4367],[37.4166,-117.4367],[37.4166,-117.4367],[37.4166,-117.4367],[37.4166,-117.4367],[37.4166,-117.4367],[37.4166,-117.4367],[37.4166,-117.4367],[37.4166,-117.4367],[37.4166,-117.4367],[37.4166,-117.4367],[37.4166,-117.4367],[37.6779,-118.797],[37.681,-118.8205],[37.6827,-118.8331],[37.6885,-118.876],[37.6923,-118.904],[37.6933,-118.9109],[37.6981,-118.946],[37.7025,-118.9778],[37.7066,-119.0075],[37.7101,-119.0327],[37.712,-119.0464],[37.7134,-119.057],[37.7186,-119.0955],[37.7218,-119.12],[37.7229,-119.1284],[37.7307,-119.1872],[37.7318,-119.1949],[37.7352,-119.2201],[37.7401,-119.2569],[37.7442,-119.2876],[37.7462,-119.3032],[37.7497,-119.3295],[37.7522,-119.3478],[37.7558,-119.374],[37.7617,-119.4191],[37.7649,-119.4425],[37.7681,-119.4656],[37.7694,-119.4751],[37.7745,-119.5148],[37.7756,-119.5231],[37.7776,-119.5381],[37.7834,-119.5821],[37.7875,-119.6129],[37.7869,-119.6082],[37.7929,-119.6548],[37.7958,-119.6762],[37.7988,-119.6994],[37.8017,-119.7222],[37.8049,-119.7468],[37.8059,-119.7547],[37.8123,-119.8033],[37.8174,-119.8421],[37.8204,-119.8654],[37.824,-119.8932],[37.827,-119.9172],[37.8295,-119.9371],[37.8327,-119.9628],[37.8327,-119.9628],[37.8379,-120.0039],[37.8412,-120.0303],[37.8409,-120.0277],[37.8475,-120.08],[37.8505,-120.1029],[37.8544,-120.1339]], {color: 'red', weight: 4}).addTo(map).bindTooltip("Observed Flight Path");
+        L.circleMarker([36.0827, -116.1694], {color: 'darkred', fillColor: 'red', fillOpacity: 1, radius: 4}).addTo(map).bindTooltip('T=1774161616.11s');
+L.circleMarker([36.0804, -116.1666], {color: 'darkred', fillColor: 'red', fillOpacity: 1, radius: 4}).addTo(map).bindTooltip('T=1774161616.84s');
+L.circleMarker([36.0956, -116.1854], {color: 'darkred', fillColor: 'red', fillOpacity: 1, radius: 4}).addTo(map).bindTooltip('T=1774161628.40s');
+L.circleMarker([36.0935, -116.1828], {color: 'darkred', fillColor: 'red', fillOpacity: 1, radius: 4}).addTo(map).bindTooltip('T=1774161639.34s');
+L.circleMarker([36.1312, -116.2299], {color: 'darkred', fillColor: 'red', fillOpacity: 1, radius: 4}).addTo(map).bindTooltip('T=1774161650.12s');
+L.circleMarker([36.1412, -116.2422], {color: 'darkred', fillColor: 'red', fillOpacity: 1, radius: 4}).addTo(map).bindTooltip('T=1774161660.91s');
+L.circleMarker([36.1454, -116.2475], {color: 'darkred', fillColor: 'red', fillOpacity: 1, radius: 4}).addTo(map).bindTooltip('T=1774161671.71s');
+L.circleMarker([36.1804, -116.291], {color: 'darkred', fillColor: 'red', fillOpacity: 1, radius: 4}).addTo(map).bindTooltip('T=1774161682.49s');
+L.circleMarker([36.1866, -116.2988], {color: 'darkred', fillColor: 'red', fillOpacity: 1, radius: 4}).addTo(map).bindTooltip('T=1774161693.36s');
+L.circleMarker([36.2078, -116.3252], {color: 'darkred', fillColor: 'red', fillOpacity: 1, radius: 4}).addTo(map).bindTooltip('T=1774161704.15s');
+L.circleMarker([36.224, -116.3452], {color: 'darkred', fillColor: 'red', fillOpacity: 1, radius: 4}).addTo(map).bindTooltip('T=1774161715.02s');
+L.circleMarker([36.224, -116.3452], {color: 'darkred', fillColor: 'red', fillOpacity: 1, radius: 4}).addTo(map).bindTooltip('T=1774161725.81s');
+L.circleMarker([36.224, -116.3452], {color: 'darkred', fillColor: 'red', fillOpacity: 1, radius: 4}).addTo(map).bindTooltip('T=1774161736.59s');
+L.circleMarker([36.2668, -116.3985], {color: 'darkred', fillColor: 'red', fillOpacity: 1, radius: 4}).addTo(map).bindTooltip('T=1774161747.37s');
+L.circleMarker([36.2831, -116.4189], {color: 'darkred', fillColor: 'red', fillOpacity: 1, radius: 4}).addTo(map).bindTooltip('T=1774161758.16s');
+L.circleMarker([36.2998, -116.439], {color: 'darkred', fillColor: 'red', fillOpacity: 1, radius: 4}).addTo(map).bindTooltip('T=1774161768.92s');
+L.circleMarker([36.3126, -116.4538], {color: 'darkred', fillColor: 'red', fillOpacity: 1, radius: 4}).addTo(map).bindTooltip('T=1774161779.66s');
+L.circleMarker([36.3172, -116.4592], {color: 'darkred', fillColor: 'red', fillOpacity: 1, radius: 4}).addTo(map).bindTooltip('T=1774161790.44s');
+L.circleMarker([36.3462, -116.4936], {color: 'darkred', fillColor: 'red', fillOpacity: 1, radius: 4}).addTo(map).bindTooltip('T=1774161801.20s');
+L.circleMarker([36.3578, -116.5073], {color: 'darkred', fillColor: 'red', fillOpacity: 1, radius: 4}).addTo(map).bindTooltip('T=1774161812.00s');
+L.circleMarker([36.3715, -116.5235], {color: 'darkred', fillColor: 'red', fillOpacity: 1, radius: 4}).addTo(map).bindTooltip('T=1774161822.78s');
+L.circleMarker([36.3895, -116.545], {color: 'darkred', fillColor: 'red', fillOpacity: 1, radius: 4}).addTo(map).bindTooltip('T=1774161833.55s');
+L.circleMarker([36.3924, -116.5484], {color: 'darkred', fillColor: 'red', fillOpacity: 1, radius: 4}).addTo(map).bindTooltip('T=1774161844.30s');
+L.circleMarker([36.3895, -116.545], {color: 'darkred', fillColor: 'red', fillOpacity: 1, radius: 4}).addTo(map).bindTooltip('T=1774161855.11s');
+L.circleMarker([36.4347, -116.5992], {color: 'darkred', fillColor: 'red', fillOpacity: 1, radius: 4}).addTo(map).bindTooltip('T=1774161865.91s');
+L.circleMarker([36.4442, -116.6105], {color: 'darkred', fillColor: 'red', fillOpacity: 1, radius: 4}).addTo(map).bindTooltip('T=1774161876.73s');
+L.circleMarker([36.4692, -116.6391], {color: 'darkred', fillColor: 'red', fillOpacity: 1, radius: 4}).addTo(map).bindTooltip('T=1774161887.52s');
+L.circleMarker([36.4812, -116.6527], {color: 'darkred', fillColor: 'red', fillOpacity: 1, radius: 4}).addTo(map).bindTooltip('T=1774161898.30s');
+L.circleMarker([36.5047, -116.6795], {color: 'darkred', fillColor: 'red', fillOpacity: 1, radius: 4}).addTo(map).bindTooltip('T=1774161909.06s');
+L.circleMarker([36.5152, -116.6915], {color: 'darkred', fillColor: 'red', fillOpacity: 1, radius: 4}).addTo(map).bindTooltip('T=1774161919.83s');
+L.circleMarker([36.5195, -116.6963], {color: 'darkred', fillColor: 'red', fillOpacity: 1, radius: 4}).addTo(map).bindTooltip('T=1774161930.64s');
+L.circleMarker([36.5348, -116.7135], {color: 'darkred', fillColor: 'red', fillOpacity: 1, radius: 4}).addTo(map).bindTooltip('T=1774161941.47s');
+L.circleMarker([36.5152, -116.6915], {color: 'darkred', fillColor: 'red', fillOpacity: 1, radius: 4}).addTo(map).bindTooltip('T=1774161952.66s');
+L.circleMarker([36.5748, -116.7591], {color: 'darkred', fillColor: 'red', fillOpacity: 1, radius: 4}).addTo(map).bindTooltip('T=1774161963.45s');
+L.circleMarker([36.5946, -116.7818], {color: 'darkred', fillColor: 'red', fillOpacity: 1, radius: 4}).addTo(map).bindTooltip('T=1774161974.21s');
+L.circleMarker([36.5748, -116.7591], {color: 'darkred', fillColor: 'red', fillOpacity: 1, radius: 4}).addTo(map).bindTooltip('T=1774161984.96s');
+L.circleMarker([36.6306, -116.8228], {color: 'darkred', fillColor: 'red', fillOpacity: 1, radius: 4}).addTo(map).bindTooltip('T=1774161995.76s');
+L.circleMarker([36.6109, -116.8003], {color: 'darkred', fillColor: 'red', fillOpacity: 1, radius: 4}).addTo(map).bindTooltip('T=1774162006.59s');
+L.circleMarker([36.6594, -116.8556], {color: 'darkred', fillColor: 'red', fillOpacity: 1, radius: 4}).addTo(map).bindTooltip('T=1774162017.32s');
+L.circleMarker([36.6594, -116.8556], {color: 'darkred', fillColor: 'red', fillOpacity: 1, radius: 4}).addTo(map).bindTooltip('T=1774162028.04s');
+L.circleMarker([36.6594, -116.8556], {color: 'darkred', fillColor: 'red', fillOpacity: 1, radius: 4}).addTo(map).bindTooltip('T=1774162038.79s');
+L.circleMarker([36.6594, -116.8556], {color: 'darkred', fillColor: 'red', fillOpacity: 1, radius: 4}).addTo(map).bindTooltip('T=1774162049.55s');
+L.circleMarker([36.6594, -116.8556], {color: 'darkred', fillColor: 'red', fillOpacity: 1, radius: 4}).addTo(map).bindTooltip('T=1774162060.32s');
+L.circleMarker([36.743, -116.9439], {color: 'darkred', fillColor: 'red', fillOpacity: 1, radius: 4}).addTo(map).bindTooltip('T=1774162071.10s');
+L.circleMarker([36.7657, -116.9617], {color: 'darkred', fillColor: 'red', fillOpacity: 1, radius: 4}).addTo(map).bindTooltip('T=1774162081.84s');
+L.circleMarker([36.7865, -116.9758], {color: 'darkred', fillColor: 'red', fillOpacity: 1, radius: 4}).addTo(map).bindTooltip('T=1774162092.61s');
+L.circleMarker([36.8061, -116.9886], {color: 'darkred', fillColor: 'red', fillOpacity: 1, radius: 4}).addTo(map).bindTooltip('T=1774162103.37s');
+L.circleMarker([36.8109, -116.9918], {color: 'darkred', fillColor: 'red', fillOpacity: 1, radius: 4}).addTo(map).bindTooltip('T=1774162114.13s');
+L.circleMarker([36.8459, -117.0147], {color: 'darkred', fillColor: 'red', fillOpacity: 1, radius: 4}).addTo(map).bindTooltip('T=1774162124.91s');
+L.circleMarker([36.8637, -117.0263], {color: 'darkred', fillColor: 'red', fillOpacity: 1, radius: 4}).addTo(map).bindTooltip('T=1774162135.70s');
+L.circleMarker([36.8865, -117.0411], {color: 'darkred', fillColor: 'red', fillOpacity: 1, radius: 4}).addTo(map).bindTooltip('T=1774162146.45s');
+L.circleMarker([36.8995, -117.0495], {color: 'darkred', fillColor: 'red', fillOpacity: 1, radius: 4}).addTo(map).bindTooltip('T=1774162157.21s');
+L.circleMarker([36.8995, -117.0495], {color: 'darkred', fillColor: 'red', fillOpacity: 1, radius: 4}).addTo(map).bindTooltip('T=1774162167.97s');
+L.circleMarker([36.8995, -117.0495], {color: 'darkred', fillColor: 'red', fillOpacity: 1, radius: 4}).addTo(map).bindTooltip('T=1774162178.71s');
+L.circleMarker([36.8995, -117.0495], {color: 'darkred', fillColor: 'red', fillOpacity: 1, radius: 4}).addTo(map).bindTooltip('T=1774162189.44s');
+L.circleMarker([36.8995, -117.0495], {color: 'darkred', fillColor: 'red', fillOpacity: 1, radius: 4}).addTo(map).bindTooltip('T=1774162200.25s');
+L.circleMarker([36.8995, -117.0495], {color: 'darkred', fillColor: 'red', fillOpacity: 1, radius: 4}).addTo(map).bindTooltip('T=1774162211.02s');
+L.circleMarker([36.8995, -117.0495], {color: 'darkred', fillColor: 'red', fillOpacity: 1, radius: 4}).addTo(map).bindTooltip('T=1774162221.76s');
+L.circleMarker([36.8995, -117.0495], {color: 'darkred', fillColor: 'red', fillOpacity: 1, radius: 4}).addTo(map).bindTooltip('T=1774162232.56s');
+L.circleMarker([36.8995, -117.0495], {color: 'darkred', fillColor: 'red', fillOpacity: 1, radius: 4}).addTo(map).bindTooltip('T=1774162243.34s');
+L.circleMarker([36.8995, -117.0495], {color: 'darkred', fillColor: 'red', fillOpacity: 1, radius: 4}).addTo(map).bindTooltip('T=1774162254.09s');
+L.circleMarker([36.8995, -117.0495], {color: 'darkred', fillColor: 'red', fillOpacity: 1, radius: 4}).addTo(map).bindTooltip('T=1774162264.82s');
+L.circleMarker([36.8995, -117.0495], {color: 'darkred', fillColor: 'red', fillOpacity: 1, radius: 4}).addTo(map).bindTooltip('T=1774162276.81s');
+L.circleMarker([36.8995, -117.0495], {color: 'darkred', fillColor: 'red', fillOpacity: 1, radius: 4}).addTo(map).bindTooltip('T=1774162287.54s');
+L.circleMarker([36.8995, -117.0495], {color: 'darkred', fillColor: 'red', fillOpacity: 1, radius: 4}).addTo(map).bindTooltip('T=1774162298.28s');
+L.circleMarker([36.8995, -117.0495], {color: 'darkred', fillColor: 'red', fillOpacity: 1, radius: 4}).addTo(map).bindTooltip('T=1774162309.02s');
+L.circleMarker([36.8995, -117.0495], {color: 'darkred', fillColor: 'red', fillOpacity: 1, radius: 4}).addTo(map).bindTooltip('T=1774162319.86s');
+L.circleMarker([36.8995, -117.0495], {color: 'darkred', fillColor: 'red', fillOpacity: 1, radius: 4}).addTo(map).bindTooltip('T=1774162330.68s');
+L.circleMarker([36.8995, -117.0495], {color: 'darkred', fillColor: 'red', fillOpacity: 1, radius: 4}).addTo(map).bindTooltip('T=1774162341.47s');
+L.circleMarker([36.8995, -117.0495], {color: 'darkred', fillColor: 'red', fillOpacity: 1, radius: 4}).addTo(map).bindTooltip('T=1774162352.22s');
+L.circleMarker([37.2757, -117.2966], {color: 'darkred', fillColor: 'red', fillOpacity: 1, radius: 4}).addTo(map).bindTooltip('T=1774162362.99s');
+L.circleMarker([37.2924, -117.3101], {color: 'darkred', fillColor: 'red', fillOpacity: 1, radius: 4}).addTo(map).bindTooltip('T=1774162373.74s');
+L.circleMarker([37.322, -117.3371], {color: 'darkred', fillColor: 'red', fillOpacity: 1, radius: 4}).addTo(map).bindTooltip('T=1774162384.49s');
+L.circleMarker([37.3392, -117.3551], {color: 'darkred', fillColor: 'red', fillOpacity: 1, radius: 4}).addTo(map).bindTooltip('T=1774162395.32s');
+L.circleMarker([37.3569, -117.3739], {color: 'darkred', fillColor: 'red', fillOpacity: 1, radius: 4}).addTo(map).bindTooltip('T=1774162406.12s');
+L.circleMarker([37.3554, -117.3723], {color: 'darkred', fillColor: 'red', fillOpacity: 1, radius: 4}).addTo(map).bindTooltip('T=1774162416.88s');
+L.circleMarker([37.3727, -117.3902], {color: 'darkred', fillColor: 'red', fillOpacity: 1, radius: 4}).addTo(map).bindTooltip('T=1774162427.63s');
+L.circleMarker([37.405, -117.4242], {color: 'darkred', fillColor: 'red', fillOpacity: 1, radius: 4}).addTo(map).bindTooltip('T=1774162438.36s');
+L.circleMarker([37.4081, -117.4276], {color: 'darkred', fillColor: 'red', fillOpacity: 1, radius: 4}).addTo(map).bindTooltip('T=1774162449.12s');
+L.circleMarker([37.4166, -117.4367], {color: 'darkred', fillColor: 'red', fillOpacity: 1, radius: 4}).addTo(map).bindTooltip('T=1774162459.85s');
+L.circleMarker([37.4166, -117.4367], {color: 'darkred', fillColor: 'red', fillOpacity: 1, radius: 4}).addTo(map).bindTooltip('T=1774162470.62s');
+L.circleMarker([37.4166, -117.4367], {color: 'darkred', fillColor: 'red', fillOpacity: 1, radius: 4}).addTo(map).bindTooltip('T=1774162481.43s');
+L.circleMarker([37.4166, -117.4367], {color: 'darkred', fillColor: 'red', fillOpacity: 1, radius: 4}).addTo(map).bindTooltip('T=1774162492.20s');
+L.circleMarker([37.4166, -117.4367], {color: 'darkred', fillColor: 'red', fillOpacity: 1, radius: 4}).addTo(map).bindTooltip('T=1774162503.01s');
+L.circleMarker([37.4166, -117.4367], {color: 'darkred', fillColor: 'red', fillOpacity: 1, radius: 4}).addTo(map).bindTooltip('T=1774162513.75s');
+L.circleMarker([37.4166, -117.4367], {color: 'darkred', fillColor: 'red', fillOpacity: 1, radius: 4}).addTo(map).bindTooltip('T=1774162524.51s');
+L.circleMarker([37.4166, -117.4367], {color: 'darkred', fillColor: 'red', fillOpacity: 1, radius: 4}).addTo(map).bindTooltip('T=1774162535.26s');
+L.circleMarker([37.4166, -117.4367], {color: 'darkred', fillColor: 'red', fillOpacity: 1, radius: 4}).addTo(map).bindTooltip('T=1774162546.02s');
+L.circleMarker([37.4166, -117.4367], {color: 'darkred', fillColor: 'red', fillOpacity: 1, radius: 4}).addTo(map).bindTooltip('T=1774162556.76s');
+L.circleMarker([37.4166, -117.4367], {color: 'darkred', fillColor: 'red', fillOpacity: 1, radius: 4}).addTo(map).bindTooltip('T=1774162567.52s');
+L.circleMarker([37.4166, -117.4367], {color: 'darkred', fillColor: 'red', fillOpacity: 1, radius: 4}).addTo(map).bindTooltip('T=1774162578.28s');
+L.circleMarker([37.4166, -117.4367], {color: 'darkred', fillColor: 'red', fillOpacity: 1, radius: 4}).addTo(map).bindTooltip('T=1774162589.01s');
+L.circleMarker([37.4166, -117.4367], {color: 'darkred', fillColor: 'red', fillOpacity: 1, radius: 4}).addTo(map).bindTooltip('T=1774162599.75s');
+L.circleMarker([37.4166, -117.4367], {color: 'darkred', fillColor: 'red', fillOpacity: 1, radius: 4}).addTo(map).bindTooltip('T=1774162610.57s');
+L.circleMarker([37.4166, -117.4367], {color: 'darkred', fillColor: 'red', fillOpacity: 1, radius: 4}).addTo(map).bindTooltip('T=1774162621.35s');
+L.circleMarker([37.4166, -117.4367], {color: 'darkred', fillColor: 'red', fillOpacity: 1, radius: 4}).addTo(map).bindTooltip('T=1774162632.16s');
+L.circleMarker([37.4166, -117.4367], {color: 'darkred', fillColor: 'red', fillOpacity: 1, radius: 4}).addTo(map).bindTooltip('T=1774162642.93s');
+L.circleMarker([37.4166, -117.4367], {color: 'darkred', fillColor: 'red', fillOpacity: 1, radius: 4}).addTo(map).bindTooltip('T=1774162653.67s');
+L.circleMarker([37.4166, -117.4367], {color: 'darkred', fillColor: 'red', fillOpacity: 1, radius: 4}).addTo(map).bindTooltip('T=1774162664.41s');
+L.circleMarker([37.4166, -117.4367], {color: 'darkred', fillColor: 'red', fillOpacity: 1, radius: 4}).addTo(map).bindTooltip('T=1774162675.19s');
+L.circleMarker([37.4166, -117.4367], {color: 'darkred', fillColor: 'red', fillOpacity: 1, radius: 4}).addTo(map).bindTooltip('T=1774162686.01s');
+L.circleMarker([37.4166, -117.4367], {color: 'darkred', fillColor: 'red', fillOpacity: 1, radius: 4}).addTo(map).bindTooltip('T=1774162696.86s');
+L.circleMarker([37.4166, -117.4367], {color: 'darkred', fillColor: 'red', fillOpacity: 1, radius: 4}).addTo(map).bindTooltip('T=1774162707.64s');
+L.circleMarker([37.4166, -117.4367], {color: 'darkred', fillColor: 'red', fillOpacity: 1, radius: 4}).addTo(map).bindTooltip('T=1774162719.03s');
+L.circleMarker([37.4166, -117.4367], {color: 'darkred', fillColor: 'red', fillOpacity: 1, radius: 4}).addTo(map).bindTooltip('T=1774162729.79s');
+L.circleMarker([37.4166, -117.4367], {color: 'darkred', fillColor: 'red', fillOpacity: 1, radius: 4}).addTo(map).bindTooltip('T=1774162740.57s');
+L.circleMarker([37.4166, -117.4367], {color: 'darkred', fillColor: 'red', fillOpacity: 1, radius: 4}).addTo(map).bindTooltip('T=1774162751.45s');
+L.circleMarker([37.6779, -118.797], {color: 'darkred', fillColor: 'red', fillOpacity: 1, radius: 4}).addTo(map).bindTooltip('T=1774163020.91s');
+L.circleMarker([37.681, -118.8205], {color: 'darkred', fillColor: 'red', fillOpacity: 1, radius: 4}).addTo(map).bindTooltip('T=1774163031.72s');
+L.circleMarker([37.6827, -118.8331], {color: 'darkred', fillColor: 'red', fillOpacity: 1, radius: 4}).addTo(map).bindTooltip('T=1774163042.44s');
+L.circleMarker([37.6885, -118.876], {color: 'darkred', fillColor: 'red', fillOpacity: 1, radius: 4}).addTo(map).bindTooltip('T=1774163053.16s');
+L.circleMarker([37.6923, -118.904], {color: 'darkred', fillColor: 'red', fillOpacity: 1, radius: 4}).addTo(map).bindTooltip('T=1774163063.95s');
+L.circleMarker([37.6933, -118.9109], {color: 'darkred', fillColor: 'red', fillOpacity: 1, radius: 4}).addTo(map).bindTooltip('T=1774163074.70s');
+L.circleMarker([37.6981, -118.946], {color: 'darkred', fillColor: 'red', fillOpacity: 1, radius: 4}).addTo(map).bindTooltip('T=1774163085.42s');
+L.circleMarker([37.7025, -118.9778], {color: 'darkred', fillColor: 'red', fillOpacity: 1, radius: 4}).addTo(map).bindTooltip('T=1774163096.27s');
+L.circleMarker([37.7066, -119.0075], {color: 'darkred', fillColor: 'red', fillOpacity: 1, radius: 4}).addTo(map).bindTooltip('T=1774163107.08s');
+L.circleMarker([37.7101, -119.0327], {color: 'darkred', fillColor: 'red', fillOpacity: 1, radius: 4}).addTo(map).bindTooltip('T=1774163117.87s');
+L.circleMarker([37.712, -119.0464], {color: 'darkred', fillColor: 'red', fillOpacity: 1, radius: 4}).addTo(map).bindTooltip('T=1774163128.62s');
+L.circleMarker([37.7134, -119.057], {color: 'darkred', fillColor: 'red', fillOpacity: 1, radius: 4}).addTo(map).bindTooltip('T=1774163139.41s');
+L.circleMarker([37.7186, -119.0955], {color: 'darkred', fillColor: 'red', fillOpacity: 1, radius: 4}).addTo(map).bindTooltip('T=1774163150.18s');
+L.circleMarker([37.7218, -119.12], {color: 'darkred', fillColor: 'red', fillOpacity: 1, radius: 4}).addTo(map).bindTooltip('T=1774163160.93s');
+L.circleMarker([37.7229, -119.1284], {color: 'darkred', fillColor: 'red', fillOpacity: 1, radius: 4}).addTo(map).bindTooltip('T=1774163171.68s');
+L.circleMarker([37.7307, -119.1872], {color: 'darkred', fillColor: 'red', fillOpacity: 1, radius: 4}).addTo(map).bindTooltip('T=1774163182.43s');
+L.circleMarker([37.7318, -119.1949], {color: 'darkred', fillColor: 'red', fillOpacity: 1, radius: 4}).addTo(map).bindTooltip('T=1774163193.19s');
+L.circleMarker([37.7352, -119.2201], {color: 'darkred', fillColor: 'red', fillOpacity: 1, radius: 4}).addTo(map).bindTooltip('T=1774163203.98s');
+L.circleMarker([37.7401, -119.2569], {color: 'darkred', fillColor: 'red', fillOpacity: 1, radius: 4}).addTo(map).bindTooltip('T=1774163214.75s');
+L.circleMarker([37.7442, -119.2876], {color: 'darkred', fillColor: 'red', fillOpacity: 1, radius: 4}).addTo(map).bindTooltip('T=1774163225.52s');
+L.circleMarker([37.7462, -119.3032], {color: 'darkred', fillColor: 'red', fillOpacity: 1, radius: 4}).addTo(map).bindTooltip('T=1774163236.29s');
+L.circleMarker([37.7497, -119.3295], {color: 'darkred', fillColor: 'red', fillOpacity: 1, radius: 4}).addTo(map).bindTooltip('T=1774163247.09s');
+L.circleMarker([37.7522, -119.3478], {color: 'darkred', fillColor: 'red', fillOpacity: 1, radius: 4}).addTo(map).bindTooltip('T=1774163257.86s');
+L.circleMarker([37.7558, -119.374], {color: 'darkred', fillColor: 'red', fillOpacity: 1, radius: 4}).addTo(map).bindTooltip('T=1774163268.60s');
+L.circleMarker([37.7617, -119.4191], {color: 'darkred', fillColor: 'red', fillOpacity: 1, radius: 4}).addTo(map).bindTooltip('T=1774163279.35s');
+L.circleMarker([37.7649, -119.4425], {color: 'darkred', fillColor: 'red', fillOpacity: 1, radius: 4}).addTo(map).bindTooltip('T=1774163290.11s');
+L.circleMarker([37.7681, -119.4656], {color: 'darkred', fillColor: 'red', fillOpacity: 1, radius: 4}).addTo(map).bindTooltip('T=1774163300.85s');
+L.circleMarker([37.7694, -119.4751], {color: 'darkred', fillColor: 'red', fillOpacity: 1, radius: 4}).addTo(map).bindTooltip('T=1774163311.60s');
+L.circleMarker([37.7745, -119.5148], {color: 'darkred', fillColor: 'red', fillOpacity: 1, radius: 4}).addTo(map).bindTooltip('T=1774163322.36s');
+L.circleMarker([37.7756, -119.5231], {color: 'darkred', fillColor: 'red', fillOpacity: 1, radius: 4}).addTo(map).bindTooltip('T=1774163333.10s');
+L.circleMarker([37.7776, -119.5381], {color: 'darkred', fillColor: 'red', fillOpacity: 1, radius: 4}).addTo(map).bindTooltip('T=1774163343.84s');
+L.circleMarker([37.7834, -119.5821], {color: 'darkred', fillColor: 'red', fillOpacity: 1, radius: 4}).addTo(map).bindTooltip('T=1774163354.60s');
+L.circleMarker([37.7875, -119.6129], {color: 'darkred', fillColor: 'red', fillOpacity: 1, radius: 4}).addTo(map).bindTooltip('T=1774163365.37s');
+L.circleMarker([37.7869, -119.6082], {color: 'darkred', fillColor: 'red', fillOpacity: 1, radius: 4}).addTo(map).bindTooltip('T=1774163376.13s');
+L.circleMarker([37.7929, -119.6548], {color: 'darkred', fillColor: 'red', fillOpacity: 1, radius: 4}).addTo(map).bindTooltip('T=1774163386.90s');
+L.circleMarker([37.7958, -119.6762], {color: 'darkred', fillColor: 'red', fillOpacity: 1, radius: 4}).addTo(map).bindTooltip('T=1774163397.78s');
+L.circleMarker([37.7988, -119.6994], {color: 'darkred', fillColor: 'red', fillOpacity: 1, radius: 4}).addTo(map).bindTooltip('T=1774163408.63s');
+L.circleMarker([37.8017, -119.7222], {color: 'darkred', fillColor: 'red', fillOpacity: 1, radius: 4}).addTo(map).bindTooltip('T=1774163419.37s');
+L.circleMarker([37.8049, -119.7468], {color: 'darkred', fillColor: 'red', fillOpacity: 1, radius: 4}).addTo(map).bindTooltip('T=1774163430.11s');
+L.circleMarker([37.8059, -119.7547], {color: 'darkred', fillColor: 'red', fillOpacity: 1, radius: 4}).addTo(map).bindTooltip('T=1774163440.87s');
+L.circleMarker([37.8123, -119.8033], {color: 'darkred', fillColor: 'red', fillOpacity: 1, radius: 4}).addTo(map).bindTooltip('T=1774163451.63s');
+L.circleMarker([37.8174, -119.8421], {color: 'darkred', fillColor: 'red', fillOpacity: 1, radius: 4}).addTo(map).bindTooltip('T=1774163462.45s');
+L.circleMarker([37.8204, -119.8654], {color: 'darkred', fillColor: 'red', fillOpacity: 1, radius: 4}).addTo(map).bindTooltip('T=1774163473.26s');
+L.circleMarker([37.824, -119.8932], {color: 'darkred', fillColor: 'red', fillOpacity: 1, radius: 4}).addTo(map).bindTooltip('T=1774163484.17s');
+L.circleMarker([37.827, -119.9172], {color: 'darkred', fillColor: 'red', fillOpacity: 1, radius: 4}).addTo(map).bindTooltip('T=1774163494.91s');
+L.circleMarker([37.8295, -119.9371], {color: 'darkred', fillColor: 'red', fillOpacity: 1, radius: 4}).addTo(map).bindTooltip('T=1774163505.72s');
+L.circleMarker([37.8327, -119.9628], {color: 'darkred', fillColor: 'red', fillOpacity: 1, radius: 4}).addTo(map).bindTooltip('T=1774163516.57s');
+L.circleMarker([37.8327, -119.9628], {color: 'darkred', fillColor: 'red', fillOpacity: 1, radius: 4}).addTo(map).bindTooltip('T=1774163527.39s');
+L.circleMarker([37.8379, -120.0039], {color: 'darkred', fillColor: 'red', fillOpacity: 1, radius: 4}).addTo(map).bindTooltip('T=1774163538.16s');
+L.circleMarker([37.8412, -120.0303], {color: 'darkred', fillColor: 'red', fillOpacity: 1, radius: 4}).addTo(map).bindTooltip('T=1774163548.95s');
+L.circleMarker([37.8409, -120.0277], {color: 'darkred', fillColor: 'red', fillOpacity: 1, radius: 4}).addTo(map).bindTooltip('T=1774163559.70s');
+L.circleMarker([37.8475, -120.08], {color: 'darkred', fillColor: 'red', fillOpacity: 1, radius: 4}).addTo(map).bindTooltip('T=1774163570.46s');
+L.circleMarker([37.8505, -120.1029], {color: 'darkred', fillColor: 'red', fillOpacity: 1, radius: 4}).addTo(map).bindTooltip('T=1774163581.21s');
+L.circleMarker([37.8544, -120.1339], {color: 'darkred', fillColor: 'red', fillOpacity: 1, radius: 4}).addTo(map).bindTooltip('T=1774163592.05s');
+
+        L.polyline([[37.8544, -120.1339], [37.87599163546133, -120.30552582033357]], {color: 'orange', weight: 4, dashArray: "10, 10"}).addTo(map).bindTooltip("Predicted Trajectory (+60s)");
+        L.marker([37.87599163546133, -120.30552582033357]).addTo(map).bindTooltip("Extrapolated Position");
+    </script>
+</body>
+</html>

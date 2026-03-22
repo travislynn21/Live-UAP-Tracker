@@ -1,0 +1,9 @@
+Flask
+Flask-Cors
+requests
+pandas
+numpy
+apscheduler
+python-dotenv
+pycoingecko
+coinbase-advanced-py
